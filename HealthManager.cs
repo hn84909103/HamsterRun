@@ -13,7 +13,6 @@ public class HealthManager : MonoBehaviour
 
     public GameObject player;
     public GameObject enemy;
-   // public GameObject enemy2;
 
     public string gameOverScene;
 
@@ -31,17 +30,10 @@ public class HealthManager : MonoBehaviour
         {
             player.SetActive(false);
             enemy.SetActive(false);
-            //enemy2.SetActive(false);
+ 
             SceneManager.LoadScene(gameOverScene);
         }
     }
-    /*
-    public void SetMaxHealth(float health)
-    {
-        slider.maxValue = health;
-        slider.value = health;
-        Debug.Log("receive max");
-    }*/
 
     void LoseHealth()
     {
@@ -59,7 +51,7 @@ public class HealthManager : MonoBehaviour
     {
         currentHealth += 10f;
         SetHealth(currentHealth);
-        Debug.Log("HP+1");
+        //Debug.Log("HP+10");
     }
 
     public void SetHealth(float health)
