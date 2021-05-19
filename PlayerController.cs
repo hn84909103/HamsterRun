@@ -50,7 +50,6 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(new Vector3(0, 7, 0), ForceMode.Impulse);
             isOnTheGround = false;
-            Debug.Log("level ID: " + levelId);
         }
 
         if (Input.GetKeyDown(KeyCode.Q))
@@ -74,14 +73,14 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             healthManager.Damage(30);
-            Debug.Log("Enemy");
+            //Debug.Log("Enemy");
         }
 
         //unlock next level
         if (collision.gameObject.tag == "Cage")
         {
             levelControl.Unlock(IsCollected);
-            Debug.Log("Check condition");
+            //Debug.Log("Check condition");
         }
 
         //teleport
