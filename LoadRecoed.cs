@@ -14,7 +14,6 @@ public class LoadRecoed : MonoBehaviour
     public AudioClip bgm;
     public AudioSource myaudio;
 
-    // Start is called before the first frame update
     void Start()
     {
         DisplayTime(300f - TimerController.recordOne, t1);
@@ -26,7 +25,6 @@ public class LoadRecoed : MonoBehaviour
         myaudio.Play();
     }
 
-    // Update is called once per frame
     void Update()
     {
 

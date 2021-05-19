@@ -9,15 +9,13 @@ public class GameOver : MonoBehaviour
     public string level1SceneName;
     public string level2SceneName;
     public string level3SceneName;
-    public static int level=1;
+   // public static int level=1;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
