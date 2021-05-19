@@ -12,14 +12,12 @@ public class ScoreManager : MonoBehaviour
     public GameObject arrow1;
     public GameObject arrow2;
 
-    // Start is called before the first frame update
     void Start()
     {
         score = 0;
-        Debug.Log("score:" + score);
+        //Debug.Log("score:" + score);
     }
 
-    // Update is called once per frame
     void Update()
     {
         scoreText.text = score.ToString();
@@ -35,15 +33,13 @@ public class ScoreManager : MonoBehaviour
 
     public void IsAllCollected(int currentScore)
     {
-        Debug.Log("current s:" + score);
-        Debug.Log("max s:" + maxScore);
 
         if (currentScore == maxScore)
         {
             AllCollected = true;
             arrow1.SetActive(false);
             arrow2.SetActive(true);
-            Debug.Log("Collected em' all!");
+            //Debug.Log("Collected all!");
         }
         else
         {
