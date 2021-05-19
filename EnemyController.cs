@@ -10,8 +10,6 @@ public class EnemyController : MonoBehaviour
     private NavMeshAgent nav;
     private bool flag;
     
-
-    // Start is called before the first frame update
     void Start()
     {
         flag = false; 
@@ -21,22 +19,20 @@ public class EnemyController : MonoBehaviour
 
 
         nav = GetComponent<NavMeshAgent>();
- 
-
     }
 
-    // Update is called once per frame
+
     void Update()
     {
   
        if(flag)
         {
             nav.SetDestination(p2.position);
-            Debug.Log("flag = " + flag);
+            //Debug.Log("flag = " + flag);
         }else
         {
             nav.SetDestination(p1.position);
-            Debug.Log("flag = " + flag);
+            //Debug.Log("flag = " + flag);
         }
         
         

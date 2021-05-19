@@ -10,7 +10,6 @@ public class EnemyController2 : MonoBehaviour
     private NavMeshAgent nav;
     private bool flag;
 
-    // Start is called before the first frame update
     void Start()
     {
         flag = false;
@@ -20,10 +19,8 @@ public class EnemyController2 : MonoBehaviour
 
 
         nav = GetComponent<NavMeshAgent>();
-
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (flag)
@@ -43,14 +40,14 @@ public class EnemyController2 : MonoBehaviour
         if (collision.gameObject.tag == "point2")
         {
             flag = true;
-            Debug.Log("flag2 touched 2");
+            //Debug.Log("flag2 touched 2");
         }
 
 
         if (collision.gameObject.tag == "point3")
         {
             flag = false;
-            Debug.Log("flag2 touched 3");
+            //Debug.Log("flag2 touched 3");
         }
     }
 }
