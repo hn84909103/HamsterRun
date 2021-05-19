@@ -10,8 +10,6 @@ public class LevelControl : MonoBehaviour
     public string Win;
     public TimerController timercontroller;
 
-    //public ScoreManager scoreManager;
-
     public void Unlock(bool b)
     {
         if (b)
@@ -21,12 +19,9 @@ public class LevelControl : MonoBehaviour
             checkLevel();
         }
 
-        /* GameOver.level = 2;
-         SceneManager.LoadScene(LevelTScene);*/
-
         else
         {
-            Debug.Log("no");
+            //Debug.Log("no");
         }
     }
 
@@ -34,12 +29,12 @@ public class LevelControl : MonoBehaviour
         switch (PlayerController.levelId)
         {
             case 1:
-                GameOver.level = 2;
+                //GameOver.level = 2;
                 SceneManager.LoadScene(LevelTScene);
                 break;
 
             case 2:
-                GameOver.level = 3;
+                //GameOver.level = 3;
                 SceneManager.LoadScene(Level2TScene);
                 break;
 
@@ -48,15 +43,4 @@ public class LevelControl : MonoBehaviour
                 break;
         }
     }
-    /*
-    IEnumerator LoadLevel()
-    {
-        //anaimae
-
-        //wait
-        yield return new WaitForSeconds(2f);
-
-        //load scene
-        SceneManager.LoadScene("Level2");
-    }*/
 }
